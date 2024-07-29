@@ -18,6 +18,11 @@ function addToList() {
     }
 }
 
+function toggleTask(index) {    // saves the done property to local storage to be seen after refresh
+    todoList[index].done = !todoList[index].done;
+    renderTodoList();
+}
+
 function renderTodoList() {
     localStorage.setItem('todoList', JSON.stringify(todoList)); // save the list in localStorage to be seen after refresh
     let todoListHTML = '';
