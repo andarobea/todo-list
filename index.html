@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO-list</title>
+    </head>
+    
+    <body>
+        <h1>TODO List</h1>
+        <link rel="stylesheet" href="style.css"> <!--Formating of this page is found in style.css-->
+        <div class = "input-grid">
+            <input placeholder="add task" class = "js-task-name name-input" onkeydown="
+            // console.log(event);
+            if (event.key === 'Enter')
+                addToList();
+            ">
+            <input type="date" class = "js-task-date date-input" onkeydown="
+                if (event.key === 'Enter')
+                    addToList();
+            ">
+            <button onclick="
+                addToList();
+            " class="add-button">Add</button>
+        </div>
+        <div class = "js-list-html todo-grid"></div> 
+        <button class = "clear-button" onclick="
+            deleteList();
+        ">Clear All</button>
+        <script src = "todo.js"></script>
+    </body>
+</html>
